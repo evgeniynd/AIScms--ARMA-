@@ -7,7 +7,7 @@ exports.db = {
     password: 'masterkey',
 
 };
-//ghj
+//ghj тест
 exports.rcon = {
     server: '192.168.47.16',
     port: 25575,
