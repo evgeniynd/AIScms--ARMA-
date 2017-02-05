@@ -1,0 +1,87 @@
+.domain-class {
+    height:120px;
+}
+.icon-add{
+    background-image: url(/stylesheets/images/add.png);
+}
+.icon-delete{
+    background-image: url(/stylesheets/images/delete.png);
+}
+.icon-edit{
+    background-image: url(/stylesheets/images/edit.png);
+}
+/* иконки */
+.x-panel-body{
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+.thumb{    
+    padding: 3px;
+    padding-bottom: 0;
+}
+
+.x-quirks .thumb {
+    padding-bottom: 3px;
+}
+
+.thumb img{
+    height: 70px;
+}
+.thumb-wrap{    
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+    width: 86px;
+}
+.thumb-wrap span {
+    
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 80px; /* for ie to ensure that the text is centered */
+}
+
+.x-item-over{
+    border:1px solid #dddddd;
+    background: rgba(255, 255, 255, 0.38);
+    padding: 4px;
+}
+
+.x-item-selected{
+    background: rgba(255, 255, 255, 0.38);
+    border:1px solid #99bbe8;
+    padding: 4px;
+}
+.x-item-selected .thumb{
+    background:transparent;
+}
+
+.loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+.x-view-selector {
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    border:1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter:alpha(opacity=50);
+    zoom:1;
+    background-color:#c3daf9;
+    border-color:#3399bb;
+}
+.ext-strict .ext-ie .x-tree .x-panel-bwrap{
+    position:relative;
+    overflow:hidden;
+}
+.x-editable {
+    color: #fff;
+}

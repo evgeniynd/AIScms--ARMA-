@@ -1,0 +1,20 @@
+{
+  "name": "aiscms",
+  "version": "0.0.0",
+  "description": "AIScms",
+  "main": "app.js",
+  "author": {
+    "name": "evgen"
+  },
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "3.4.4",
+    "jade": "*",
+    "list-to-tree": "^1.0.0",
+    "node-firebird": "^0.8.0",
+    "rcon": "^1.0.2",
+    "socket.io": "^1.7.2",
+    "stylus": "*",
+    "websocket": "^1.0.24"
+  }
+}

@@ -1,0 +1,51 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title} - minecraft сервер FilNetCraft
+    link(rel='stylesheet', type='text/css', href='/stylesheets/topmenucss.css')
+    //link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery-3.1.1.min.js')  
+    //script(src='/javascripts/topmenujs.js')  
+    style(type="text/css") !{css}
+    script(type="text/javascript") !{script}
+      
+  body
+  div.view
+    span(id='slog') FilnetCraft
+    div(id="logo1")
+      img(id="logo1-img" src="/files/images/logo2.png")
+    div(id="logo")
+      img(id="logo-img" src="/files/images/Minecraft-logo1.png")
+    div(id="top-menu")
+      div.nav
+        ul.nav.navbar-nav
+          li
+            a(href='/') Главная
+          li
+            a(href='/products?section=2&count=5&page=1') Донат
+          li
+            a(href='#') Файлы
+            ul
+              li
+                a(href='#') Моды
+              li
+                a(href='#') Плагины
+          li
+            a(href='#') Инструкции
+            ul
+              li
+                a(href='/page?id=2') Приват территории
+    #content
+      block content
+      
+    #footer
+        span Наши контакты
+        br
+        span evgeniynd@gmail.com
+        br
+        span kype:flintoz
+        br
+        span t. (495)523-15-47
+

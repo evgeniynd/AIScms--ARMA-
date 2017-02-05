@@ -1,0 +1,16 @@
+﻿extends layout
+
+block content
+  !{content}
+  form(id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8")
+    input(type="hidden" name="ik_co_id" value="#{interkassa}")
+    input(type="hidden" name="ik_pm_no" value="#{orderid}")
+    input(type="hidden" name="ik_am" value="#{sum}")
+    input(type="hidden" name="ik_cur" value="RUB")
+    label(for="ik_desc") Ваш ник в игре
+    br
+    input(name="ik_desc" value="Ник в игре")
+    br
+    span 
+      a(href="/Page?id=3")ознакомьтесь с публичной офертой
+    input.button(type="submit" value="Оплатить")
