@@ -1,13 +1,13 @@
-exports.cart = false;
+﻿exports.cart = false;
 exports.interkassa = '5850fe693b1eaf4f3d8b4569';
 exports.db = {
     host: '192.168.47.26',
-    database: 'c:\\sites\\DB\\TEST1_DB.fdb',
+    database: 'c:\\sites\\DB\\TEST_DB.fdb',
     user: 'SYSDBA',
     password: 'masterkey',
 
 };
-//ghj тест попраква
+//тест попраква
 exports.rcon = {
     server: '192.168.47.16',
     port: 25575,
