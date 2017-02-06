@@ -1,4 +1,4 @@
-﻿exports.cart = false;
+exports.cart = false;
 exports.interkassa = '5850fe693b1eaf4f3d8b4569';
 exports.db = {
     host: '192.168.47.26',
