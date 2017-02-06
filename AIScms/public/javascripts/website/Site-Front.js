@@ -21,9 +21,19 @@
     });
 
     Sites();
+    cats();
     Pages();
     Price();
-    
+
+
+    function cats() {
+
+        var pan = Ext.create('Ext.panel.Panel', {
+            xtype: 'panel',
+            title: 'Содержание'
+        });
+        saitTabs.add(pan);
+    };
 
     function Sites() {
 
@@ -90,9 +100,9 @@
                 }
             }
         });
-
+        
         var gridSites = Ext.create('Ext.grid.Panel', {
-            title: 'Сайты',
+            //title: 'Сайты',
             store: store,
             width: '100%',
             id: 'grid_sites',
@@ -141,6 +151,50 @@
             ]
         });
 
+        var pan = Ext.create('Ext.panel.Panel', {  
+            title: 'Основное',          
+            xtype: 'layout-border',
+            layout: 'border',
+            bodyBorder: false,
+            minWidth: 250,
+            defaults: {
+                split: true,
+                bodyPadding: 10
+            },
+            items: [
+                {
+                    title: 'Настройка',
+                    region: 'east',
+                    width: '33%',
+                    collapsible: true,
+                    margin: '5 5 0 0',
+                    //minHeight: 75,
+                    //maxHeight: 150,
+                    html: '<p>Footer content</p>'
+                },
+                {
+                    title: 'Список сайтов',
+                    id: 'site-list',
+                    region: 'west',
+                    floatable: true,
+                    layout: 'fit',
+                    margin: '5 0 0 5',
+                    width: '33%',
+                    iteml: [gridSites]
+                },
+                {
+                    title: 'Содержание',
+                    collapsible: true,
+                    region: 'center',
+                    margin: '5 0 0 0',
+                    width: '33%',
+                    html: '<h2>Main Page</h2><p>This is where the main content would go</p>'
+                }
+            ]
+        });
+
+        Ext.getCmp('site-list').add(gridSites);
+
         gridSites.getSelectionModel().on({
             selectionchange: function (sm, selections) {
                 if (selections.length) {
@@ -153,7 +207,7 @@
             }
         });
 
-        saitTabs.add(gridSites);
+        saitTabs.add(pan);
 
     };
 
@@ -668,7 +722,7 @@
         });
 
         var grid_price = Ext.create('Ext.grid.Panel', {
-            title: 'Товары',
+            title: 'Каталог',
             store: store,
             width: '100%',
             id: 'grid_price',
