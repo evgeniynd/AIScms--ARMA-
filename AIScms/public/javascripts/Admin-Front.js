@@ -58,7 +58,7 @@ Kernel.winCreate = function(data, w, h) {
 
 Kernel.socket = io('http://' + window.location.host);
 Kernel.socket.on('connect', function () {
-    console.log('connect');
+    console.log('Connect to ' + window.location.host+ ' ok!');
 });
 Kernel.socket.on('disconnect', function () {
     console.log('disconnect');

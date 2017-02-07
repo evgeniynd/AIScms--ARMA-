@@ -408,6 +408,11 @@ exports.start = function (name, kernel, plugins) {
         }            
     });
 
+    kernel.app.get('/getSiteTree', function (req, res) {
+        console.log();
+    });
+
+
     function page(res, host, id) {
         var param = {};
         var db = kernel.dbmodel.get();
@@ -458,6 +463,10 @@ exports.start = function (name, kernel, plugins) {
             callback('<ul class="menu-">' + endMenu.join('') + '</ul>');
 
         });
+    };
+
+    function gmtoadmin() {
+
     };
     
     function SendToSite(res, host, param) {
