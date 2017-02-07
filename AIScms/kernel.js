@@ -1,8 +1,8 @@
 ﻿var express = require('express');
 var http = require('http');
 var path = require('path');
-var fs = require('fs')
-var app = express();
+var fs = require('fs');
+var app = express()
 var config = require('./config');
 exports.config = config;
 var dbmodel = require('./modules/dbmodel');
