@@ -1,5 +1,7 @@
 ﻿exports.cart = false;
+
 exports.interkassa = '5850fe693b1eaf4f3d8b4569';
+
 exports.db = {
     host: '192.168.47.26',
     database: 'c:\\sites\\DB\\TEST_DB.fdb',
@@ -7,6 +9,7 @@ exports.db = {
     password: 'masterkey'
 
 };
+
 //тест попраква
 // и ещё одна
 exports.rcon = {
