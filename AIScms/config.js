@@ -4,10 +4,11 @@ exports.db = {
     host: '192.168.47.26',
     database: 'c:\\sites\\DB\\TEST_DB.fdb',
     user: 'SYSDBA',
-    password: 'masterkey',
+    password: 'masterkey'
 
 };
 //тест попраква
+// и ещё одна
 exports.rcon = {
     server: '192.168.47.16',
     port: 25575,
