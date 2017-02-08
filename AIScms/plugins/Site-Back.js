@@ -19,6 +19,9 @@ exports.start = function (name, kernel, plugins) {
     var iscart = kernel.config.cart;
 
     kernel.app.get('/', function (req, res) {
+        //res.send('Test');
+        
+        
         var db = kernel.dbmodel.get();
         var host = req.headers.host;
         var param = {};
@@ -48,6 +51,7 @@ exports.start = function (name, kernel, plugins) {
             
         });
 
+        
     });
 
     kernel.app.get('/products', function (req, res) {

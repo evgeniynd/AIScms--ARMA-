@@ -1,4 +1,6 @@
-﻿function mySite(op) {
+/*global Ext*/
+/*global Kernel*/
+function mySite(op) {
 
     Kernel.socket.on('addpage', function (data) {
         Ext.getCmp('grid_pages').getStore().insert(0, data);
@@ -33,7 +35,7 @@
             title: 'Содержание'
         });
         saitTabs.add(pan);
-    };
+    }
 
     function Sites() {
 
@@ -60,7 +62,7 @@
             text: 'Редактировать',
             disabled: true,
             handler: function (widget, event) {
-                var rec = gridPages.getSelectionModel().getSelection()[0];
+                var rec = gridSites.getSelectionModel().getSelection()[0];
                 if (rec) {
                     Site(rec);
                 }
@@ -71,7 +73,7 @@
             text: 'Удалить',
             disabled: true,
             handler: function (widget, event) {
-                var rec = gridPages.getSelectionModel().getSelection()[0];
+                var rec = gridSites.getSelectionModel().getSelection()[0];
                 if (rec) {
                 }
             }
@@ -215,7 +217,7 @@
 
         saitTabs.add(pan);
 
-    };
+    }
 
     function SiteToTree(record, rowIndex) {
         console.log(record);

@@ -1,4 +1,5 @@
-﻿var Kernel = {};
+/*global Ext*/
+var Kernel = {};
 
 Kernel.winCreate = function(data, w, h) {
     var desktopbar = Ext.getCmp('buttonbar');
@@ -229,6 +230,7 @@ Ext.onReady(function () {
 
         Kernel.socket.on('sendtime', function (data) {
             statebar.removeAll();
+            console.log(data)
             statebar.add(data);
         });
 

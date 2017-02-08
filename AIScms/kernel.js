@@ -1,4 +1,4 @@
-﻿var express = require('express');
+var express = require('express');
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
@@ -69,7 +69,7 @@ for (var i = 0; i < plugins.length; i++) {
     }
 };
 
-server.listen(app.get('port'), 'localhost', function (err) {
+server.listen(app.get('port'), function (err) {
     console.log('Сервер запущен 192.168.47.18 на порту ' + app.get('port'));    
 });
 
