@@ -15,7 +15,7 @@ conn.on('auth', function () {
 
 });
 
-conn.connect();
+//conn.connect();
 
 exports.get = function () {
     return conn;

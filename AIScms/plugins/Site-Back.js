@@ -408,6 +408,11 @@ exports.start = function (name, kernel, plugins) {
         }            
     });
 
+    kernel.app.get('/db', function (req, res) {
+        
+        console.log();
+    });
+
     kernel.app.get('/getSiteTree', function (req, res) {
         console.log();
     });

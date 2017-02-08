@@ -220,6 +220,7 @@ Ext.onReady(function () {
         var statebar = new Ext.Toolbar({
             id: 'statebar',
             border: 'none',
+            padding: 0,
             width: 60,
             items: [
                 '22:21'

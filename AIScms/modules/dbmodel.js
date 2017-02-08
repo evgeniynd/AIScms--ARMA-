@@ -8,6 +8,27 @@ var pending = [];
 var index = 0;
 var maxconnect = 5;
 exports.Firebird = Firebird;
+
+/*
+Firebird.attach(options, function (err, svc) {
+    if (err)
+        return;
+    svc.backup(
+        {
+            database: 'DB.FDB',
+            files: [
+                {
+                    filename: 'DB.FBK',
+                    sizefile: '0'
+                }
+            ]
+        },
+        function (err, data) {
+            console.log(data);
+        });
+});
+*/
+
 exports.get = function () {
     var ret;
     if (pending.length == 0) {

@@ -88,6 +88,7 @@
             model: 'Sites',
             pageSize: 20,
             autoLoad: true,
+            groupField: 'company',
             remoteSort: false,
             proxy: {
                 disableCaching: false,
@@ -106,9 +107,13 @@
             store: store,
             width: '100%',
             id: 'grid_sites',
+            features: [Ext.create('Ext.grid.feature.Grouping', { groupHeaderTpl: '{name} ({rows.length})' })],
             listeners: {
                 celldblclick: function (table, td, cellIndex, record, tr, rowIndex, e, eOpts) {                    
                     Site(record, rowIndex);
+                },
+                cellclick: function (table, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+                    SiteToTree(record, rowIndex);
                 }
             },
             columns: [{
@@ -125,6 +130,7 @@
                     header: 'Компания',
                     dataIndex: 'company',
                     width: '50%',
+                    hidden: true,
                     flex: 1
                 }],
             dockedItems: [{
@@ -209,6 +215,19 @@
 
         saitTabs.add(pan);
 
+    };
+
+    function SiteToTree(record, rowIndex) {
+        console.log(record);
+        var store = Ext.create('Ext.data.TreeStore', {
+            model: 'Task',
+            proxy: {
+                type: 'ajax',
+                //the store will get the content from the .json file
+                url: '/getSiteTree'
+            },
+            folderSort: true
+        });
     };
 
     function Site(data, rowIndex) {
