@@ -1,4 +1,5 @@
 var express = require('express');
+var connect = require('connect');
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
@@ -49,7 +50,9 @@ app.use(express.methodOverride());
 //app.use(express.cookieDecoder());
 app.use(express.cookieParser('icms'));
 app.use(express.session());
-app.use(express.bodyParser());
+//app.use(express.bodyParser());
+//app.use(connect.json());
+//app.use(connect.urlencoded());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, './public')));
 app.use(express.static(path.join(__dirname, './public')));
@@ -57,7 +60,7 @@ app.use(express.static(path.join(__dirname, './public')));
 // development only
 if ('development' == app.get('env')) {    
     app.use(express.errorHandler());
-};
+}
 
 // Запускаем плагины
 for (var i = 0; i < plugins.length; i++) {
@@ -67,9 +70,9 @@ for (var i = 0; i < plugins.length; i++) {
     } else {
         console.log('Фаил ' + files[i] + ' не является плагином');
     }
-};
+}
 
 server.listen(app.get('port'), function (err) {
-    console.log('Сервер запущен 192.168.47.18 на порту ' + app.get('port'));    
+    console.log('Сервер запущен на порту ' + app.get('port'));    
 });
 
